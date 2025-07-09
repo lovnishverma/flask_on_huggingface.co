@@ -1,0 +1,45 @@
+body {
+    background-image: url("https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif");
+    /* Example GIF */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input,
+button {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h2,
+p,
+img {
+    text-align: center;
+}

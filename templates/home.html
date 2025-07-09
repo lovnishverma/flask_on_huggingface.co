@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/bird.png') }}">
+        <title>Home</title>
+        <style>
+            body {
+                background-image: url("https://i.pinimg.com/originals/25/8d/be/258dbeafd7656001a7ef04735f099d1f.gif"); /* Example GIF */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                font-family: Arial, sans-serif;
+                color: white;
+                text-shadow: 1px 1px 2px black;
+            }
+
+            form {
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 20px;
+                border-radius: 10px;
+                width: 300px;
+                margin: 50px auto;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            }
+
+            input, button {
+                margin: 10px 0;
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            button {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+            h2, p, img {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/predict" method="post">
+            <label for="sl">Enter sepal_length:</label><br>
+            <input type="text" name="sl" required><br>
+
+            <label for="sw">Enter sepal_width:</label><br>
+            <input type="text" name="sw" required><br>
+
+            <label for="pl">Enter petal_length:</label><br>
+            <input type="text" name="pl" required><br>
+
+            <label for="pw">Enter petal_width:</label><br>
+            <input type="text" name="pw" required><br>
+
+            <button type="submit">Submit</button> <br>
+            <button><a href="/">Refresh</a></button>
+        </form>
+
+        {% if data %}
+            <h2>Prediction Result</h2>
+            <p>The predicted flower species is: <strong>{{ data }}</strong></p>
+        {% endif %}
+
+        {% if data=="setosa" %}
+            <img src="https://cdn.glitch.global/8599b2d2-58ab-4d42-98f5-97fa4c6bad04/Iris%20Setosa.png?v=1680866840563" alt="IRIS SETOSA" width="200" height="200">
+        {% elif data=="versicolor" %}
+            <img src="https://cdn.glitch.global/8599b2d2-58ab-4d42-98f5-97fa4c6bad04/Iris%20versicolor.png?v=1680866854461" alt="IRIS VERSICOLOR" width="200" height="200">
+        {% elif data=="virginica" %}
+            <img src="https://cdn.glitch.global/8599b2d2-58ab-4d42-98f5-97fa4c6bad04/Iris%20Virginica.png?v=1680866857022" alt="IRIS VIRGINICA" width="200" height="200">
+        {% endif %}
+    </body>
+</html>
