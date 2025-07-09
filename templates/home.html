@@ -68,7 +68,7 @@
             <h2>Prediction Result</h2>
             <p>The predicted flower species is: <strong>{{ data }}</strong></p>
         {% endif %}
-
+<center>
         {% if data=="setosa" %}
             <img src="https://cdn-uploads.huggingface.co/production/uploads/6474405f90330355db146c76/iVXMOLPdx1ctqWnvnFED_.png" alt="IRIS SETOSA" width="200" height="200">
         {% elif data=="versicolor" %}
@@ -76,6 +76,7 @@
         {% elif data=="virginica" %}
             <img src="https://cdn.glitch.global/8599b2d2-58ab-4d42-98f5-97fa4c6bad04/Iris%20Virginica.png?v=1680866857022" alt="IRIS VIRGINICA" width="200" height="200">
         {% endif %}
+  </center>
     </body>
 </html>
 
