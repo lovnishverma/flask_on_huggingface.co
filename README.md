@@ -8,5 +8,8 @@ pinned: false
 license: apache-2.0
 short_description: iris prediction
 ---
+# This was created to tech students how they can deploy their ML project on Huggingface.co using Flask a lightweirh framework of python
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/6474405f90330355db146c76/pMW40_7NxIT-ZGoro-QQL.png)
+
